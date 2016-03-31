@@ -100,9 +100,9 @@ def histeq(im,im2,col,row):
     img.show()
 
 def BHPF():
-	im = np.asarray(Image.open("/Users/lance/Desktop/Project3/Fig0516(a)(applo17_boulder_noisy).tif"))
-	im2 = Image.open("/Users/lance/Desktop/Project3/Fig0516(a)(applo17_boulder_noisy).tif")
-	imz = np.asarray(Image.open("/Users/lance/Desktop/Project3/c.tif"))
+	im = np.asarray(Image.open("Fig0516(a)(applo17_boulder_noisy).tif"))
+	im2 = Image.open("Fig0516(a)(applo17_boulder_noisy).tif")
+	imz = np.asarray(Image.open("Project3/c.tif"))
 	col, row = im2.size
 	freq = np.fft.fft2(im)
 	freq_shift = np.fft.fftshift(freq)
@@ -128,8 +128,8 @@ def BHPF():
 
 
 def GHPF():
-	im = np.asarray(Image.open("/Users/lance/Desktop/Project3/Fig0459(a)(orig_chest_xray).tif"))
-	im2 = Image.open("/Users/lance/Desktop/Project3/Fig0459(a)(orig_chest_xray).tif")
+	im = np.asarray(Image.open("Fig0459(a)(orig_chest_xray).tif"))
+	im2 = Image.open("/Fig0459(a)(orig_chest_xray).tif")
 	col, row = im2.size
 	freq = np.fft.fft2(im)
 	freq_shift = np.fft.fftshift(freq)
@@ -160,8 +160,8 @@ def GHPF():
 	histeq(freq_result,img,col,row)
 
 def spectrum():
-	im = np.asarray(Image.open("/Users/lance/Desktop/Project3/Fig0424(a)(rectangle).tif"))
-	im2 = Image.open("/Users/lance/Desktop/Project3/Fig0424(a)(rectangle).tif")
+	im = np.asarray(Image.open("Fig0424(a)(rectangle).tif"))
+	im2 = Image.open("Fig0424(a)(rectangle).tif")
 	col, row = im2.size
 	rpower = ceil(math.log(row,2))
 	cpower = ceil(math.log(col,2))

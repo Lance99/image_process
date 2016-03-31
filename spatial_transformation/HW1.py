@@ -203,7 +203,7 @@ def s(w):
     else:
         return 0
 
-img_o = Image.open("/Users/lance/Desktop/project1/2.png").convert('L')#read image
+img_o = Image.open("2.png").convert('L')#read image
 col,row = img_o.size #image size
 dv = 0 #sum of translation negative height
 dh = 0 #sum of translation negative horizontal move
@@ -216,5 +216,5 @@ rotation(25) # rotation(theta)
 # bilinear(0.3) # bilinear(factor)
 # nearest_neighbor(1.3) # nearest_neighbor(factor)
 
-img.save('/Users/lance/Desktop/project1/2_output.png')
+img.save('2_output.png')
 

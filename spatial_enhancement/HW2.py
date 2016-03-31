@@ -37,7 +37,7 @@ def histeq(im,im2,col,row):
 
 #Laplacian
 def b():
-	im = Image.open("/Users/lance/Desktop/project2/Fig0343.tif").convert('L')
+	im = Image.open("Fig0343.tif").convert('L')
 	col, row = im.size
 	newImage_list = np.empty((row, col),dtype=np.uint8)
 	mi = 255
@@ -63,11 +63,11 @@ def b():
 			if newImage_list[i][j] > 255:
 				newImage_list[i][j] = 255
 	img = Image.fromarray(newImage_list)
-	img.save('/Users/lance/Desktop/0343(b).tif')
+	img.save('0343(b).tif')
 #enhance
 def c():
-	im = Image.open("/Users/lance/Desktop/project2/Fig0343.tif").convert('L')
-	im2 = Image.open("/Users/lance/Desktop/0343(b).tif").convert('L')
+	im = Image.open("Fig0343.tif").convert('L')
+	im2 = Image.open("0343(b).tif").convert('L')
 	col, row = im.size
 	newImage_list = np.empty((row, col),dtype=np.uint8)
 
@@ -81,10 +81,10 @@ def c():
 			else:
 				newImage_list[i][j] = a
 	img = Image.fromarray(newImage_list)
-	img.save('/Users/lance/Desktop/0343(c).tif')
+	img.save('0343(c).tif')
 #Sobel
 def d():
-	im = Image.open("/Users/lance/Desktop/project2/Fig0343.tif").convert('L')
+	im = Image.open("Fig0343.tif").convert('L')
 	col, row = im.size
 	newImage_list = np.empty((row, col),dtype=np.uint8)
 
@@ -101,10 +101,10 @@ def d():
 			else:
 				newImage_list[i][j] = c
 	img = Image.fromarray(newImage_list)
-	img.save('/Users/lance/Desktop/0343(d).tif')
+	img.save('0343(d).tif')
 #blur
 def e():
-	im = Image.open("/Users/lance/Desktop/0343(d).tif").convert('L')
+	im = Image.open("0343(d).tif").convert('L')
 	col, row = im.size
 	newImage_list = np.empty((row, col),dtype=np.uint8)
 
@@ -122,11 +122,11 @@ def e():
 			else:
 				newImage_list[i][j] = a
 	img = Image.fromarray(newImage_list)
-	img.save('/Users/lance/Desktop/0343(e).tif')
+	img.save('0343(e).tif')
 #enhance
 def f():
-	im = Image.open("/Users/lance/Desktop/0343(c).tif")#.convert('L')
-	im2 = Image.open("/Users/lance/Desktop/0343(e).tif")#.convert('L')
+	im = Image.open("0343(c).tif")#.convert('L')
+	im2 = Image.open("0343(e).tif")#.convert('L')
 	col, row = im.size
 	newImage_list = np.empty((row, col),dtype=np.uint8)
 
@@ -140,11 +140,11 @@ def f():
 			else:
 				newImage_list[i][j] = a
 	img = Image.fromarray(newImage_list)
-	img.save('/Users/lance/Desktop/0343(f).tif')
+	img.save('0343(f).tif')
 #enhance
 def g():
-	im = Image.open("/Users/lance/Desktop/project2/Fig0343.tif")#.convert('L')
-	im2 = Image.open("/Users/lance/Desktop/0343(f).tif")#.convert('L')
+	im = Image.open("Fig0343.tif")#.convert('L')
+	im2 = Image.open("0343(f).tif")#.convert('L')
 	col, row = im.size
 	newImage_list = np.empty((row, col),dtype=np.uint8)
 
@@ -158,12 +158,12 @@ def g():
 			else:
 				newImage_list[i][j] = a
 	img = Image.fromarray(newImage_list)
-	img.save('/Users/lance/Desktop/0343(g).tif')
+	img.save('0343(g).tif')
 #result
 def h():
 	gamma = 0.7 #should between [0, 2.41]
 	c = 10
-	im = Image.open("/Users/lance/Desktop/0343(g).tif")#.convert('L')
+	im = Image.open("0343(g).tif")#.convert('L')
 	col, row = im.size
 	newImage_list = np.empty((row, col),dtype=np.uint8)
 
@@ -177,7 +177,7 @@ def h():
 			else:
 				newImage_list[i][j] = a
 	img = Image.fromarray(newImage_list)
-	img.save('/Users/lance/Desktop/0343(h).tif')
+	img.save('0343(h).tif')
 
 # # histeq
 # im = np.array(Image.open("/Users/lance/Desktop/project2/Fig0316_low.tif").convert('L'))
