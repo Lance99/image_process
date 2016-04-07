@@ -179,19 +179,20 @@ def h():
 	img = Image.fromarray(newImage_list)
 	img.save('0343(h).tif')
 
-# # histeq
-# im = np.array(Image.open("/Users/lance/Desktop/project2/Fig0316_low.tif").convert('L'))
-# im2 = Image.open("/Users/lance/Desktop/project2/Fig0316_low.tif")
-# col, row = im2.size
-# newImage_list = np.empty((row, col),dtype=np.uint8)
-# histeq(im,im2,col,row)
-# img = Image.fromarray(newImage_list)
-# img.save('/Users/lance/Desktop/light_output.tif')
+# histeq
+im = np.array(Image.open("/Users/lance/Desktop/project2/Fig0316_low.tif").convert('L'))
+im2 = Image.open("/Users/lance/Desktop/project2/Fig0316_low.tif")
+col, row = im2.size
+newImage_list = np.empty((row, col),dtype=np.uint8)
+histeq(im,im2,col,row)
+img = Image.fromarray(newImage_list)
+img.save('/Users/lance/Desktop/light_output.tif')
 
+# main
 b()
-# c()
-# d()
-# e()
-# f()
-# g()
-# h()
+c()
+d()
+e()
+f()
+g()
+h()

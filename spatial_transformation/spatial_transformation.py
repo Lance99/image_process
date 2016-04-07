@@ -203,18 +203,19 @@ def s(w):
     else:
         return 0
 
+# main
 img_o = Image.open("2.png").convert('L')#read image
 col,row = img_o.size #image size
 dv = 0 #sum of translation negative height
 dh = 0 #sum of translation negative horizontal move
 newImage_list = np.empty((row, col),dtype=np.uint8)
 img = img_o
-# translation(100,100) # translation(v,h)
-# shear(0,0.3) # shear(v,h)
+translation(100,100) # translation(v,h)
+shear(0,0.3) # shear(v,h)
 rotation(25) # rotation(theta)
-# bicubic(0.3) # bicubic(factor)
-# bilinear(0.3) # bilinear(factor)
-# nearest_neighbor(1.3) # nearest_neighbor(factor)
+bicubic(0.3) # bicubic(factor)
+bilinear(0.3) # bilinear(factor)
+nearest_neighbor(1.3) # nearest_neighbor(factor)
 
 img.save('2_output.png')
 

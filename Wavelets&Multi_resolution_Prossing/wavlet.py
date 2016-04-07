@@ -36,6 +36,7 @@ def iwidget_row(ori2, data, height, width):
 			ori2[h*2][w] = (data[h][w]+data[height/2+h][w])/(2**0.5)
 			ori2[h*2+1][w] = (data[h][w]-data[height/2+h][w])/(2**0.5)
 
+# main
 im = np.asarray(Image.open("Fig0809.tif"))
 im2 = Image.open("Fig0809.tif")
 col, row = im2.size
